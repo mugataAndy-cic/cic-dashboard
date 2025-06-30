@@ -36,6 +36,26 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/dashboard/users/page.js"
+    ],
+    "/dashboard/quotes/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/quotes/loading.js"
+    ],
+    "/dashboard/quotes/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/quotes/page.js"
+    ],
+    "/dashboard/policies/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/policies/loading.js"
+    ],
+    "/dashboard/policies/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/dashboard/policies/page.js"
     ]
   }
 }
