@@ -1,0 +1,60 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./app/dashboard/layout.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+/* Sidebar styles */
+.layout_sidebar__ltFan {
+  --sidebar-bg: hsl(var(--sidebar-background));
+  --sidebar-border: hsl(var(--sidebar-border));
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  transition-property: width, background-color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Responsive sidebar widths */
+.layout_sidebarOpen__3t6VN {
+  width: 16rem; /* 64 */
+}
+
+.layout_sidebarClosed__U0DEI {
+  width: 4rem; /* 16 */
+}
+
+/* Hover effects for desktop */
+@media (min-width: 1024px) {
+  .layout_sidebarHover__E_L7d {
+    width: 4rem; /* 16 */
+  }
+  
+  .layout_sidebarHover__E_L7d:hover,
+  .layout_group__sidebar__kvhBz:hover .layout_sidebarHover__E_L7d {
+    width: 16rem; /* 64 */
+  }
+}
+
+/* Animation keyframes */
+@keyframes layout_pulse-slow__dSbBr {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.layout_animatePulseSlow__KO8CA {
+  animation: layout_pulse-slow__dSbBr 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.layout_transitionAll__lsUNY {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.layout_fadeIn__cVGpH {
+  animation: layout_fadeIn__cVGpH 0.3s ease-in;
+}
+
+@keyframes layout_fadeIn__cVGpH {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
