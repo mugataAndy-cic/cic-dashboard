@@ -1,0 +1,82 @@
+.clientProfileHeader {
+  color: #AC1F2D;
+}
+
+.gradientBackground {
+  position: relative;
+  z-index: -1;
+}
+
+.progressContainer {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  height: 0.625rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: #AC1F2D;
+  border-radius: 9999px;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0%;
+  position: relative;
+  min-width: 0.5rem; /* Ensure visibility even at 0% */
+}
+
+/* Progress bar width is set via inline style in the component */
+.progressBarActive {
+  background-color: #8B1A26; /* Slightly darker red when active */
+}
+
+.progressBar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
+  opacity: 0.5;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.uploadButton {
+  width: 100%;
+  background-color: #AC1F2D;
+  color: white;
+}
+
+.uploadButton:hover {
+  background-color: #8B1A26;
+}
+
+.uploadArea {
+  border: 2px dashed #d1d5db;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.uploadArea:hover {
+  border-color: #AC1F2D;
+}
+
+.uploadAreaDisabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

@@ -1,0 +1,56 @@
+/* Sidebar styles */
+.sidebar {
+  --sidebar-bg: hsl(var(--sidebar-background));
+  --sidebar-border: hsl(var(--sidebar-border));
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  transition-property: width, background-color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Responsive sidebar widths */
+.sidebarOpen {
+  width: 16rem; /* 64 */
+}
+
+.sidebarClosed {
+  width: 4rem; /* 16 */
+}
+
+/* Hover effects for desktop */
+@media (min-width: 1024px) {
+  .sidebarHover {
+    width: 4rem; /* 16 */
+  }
+  
+  .sidebarHover:hover,
+  .group\/sidebar:hover .sidebarHover {
+    width: 16rem; /* 64 */
+  }
+}
+
+/* Animation keyframes */
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animatePulseSlow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.transitionAll {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
